@@ -2,7 +2,7 @@ from conans import ConanFile, tools, CMake
 
 class CTKConanRecipe(ConanFile):
     name = "CTK"
-    version = "0.2"
+    version = "0.3"
     license = "<Put the package license here>"
     url = "<Package recipe repository url here, for issues about the package>"
     description = "<Description of hello here>"
@@ -60,5 +60,5 @@ class CTKConanRecipe(ConanFile):
         self.cpp_info.libs = ["CTKCore","CTKScriptingPythonCore", "CTKWidgets","CTKScriptingPythonWidgets"]
         self.cpp_info.includedirs = ["include/CTKCore","include/CTKScriptingPythonCore", "include/CTKWidgets","include/CTKScriptingPythonWidgets" ]
         #if self.options.VTK_DIR != "":
-        #    self.cpp_info.libs+= ["CTKVisualizationVTKCore" , "CTKVisualizationVTKWidgets"]
-        #    self.cpp_info.includedirs+=["include/CTKVisualizationVTKCore", "include/CTKVisualizationVTKWidgets"]
+        self.cpp_info.libs+= ["CTKVisualizationVTKCore" , "CTKVisualizationVTKWidgets"]
+        self.cpp_info.includedirs+=["include/CTKVisualizationVTKCore", "include/CTKVisualizationVTKWidgets"]
